@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+#top, #down {
+    position: fixed;
+    width: 100%;
+    background-color: #ff7b59;
+    text-align: center;
+    box-shadow: 0 0 40px #656565;
+}
+
+#top {
+    height: 45px;
+    top: 0;
+}
+
+#down {
+    height: 35px;
+    bottom: 0;
+}
+
+.msg {
+    margin: 60px auto 10px auto;
+    top: 60px;
+    clear: both;
+    width: 1000px;
+}
+
+.active-msg {
+    position: absolute;
+    width: 1000px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+button {
+    float: right;
+    width: 23px;
+    height: 23px;
+    font-size: 20pt;
+}
+
+.content {
+    width: 1000px;
+    margin: auto;
+    color: #FFFFFF;
+    font-size: 10pt;
+    line-height: 35px;
+    text-align: center;
+}
+
+.head {
+    float: left;
+    line-height: 45px;
+}
+
+.head a {
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.login {
+    float: right;
+    line-height: 45px;
+}
+
+.login a {
+    color: #FFFFFF;
+}
+
+.footer {
+    font-size: 10pt;
+    color: #FFFFFF;
+    line-height: 35px;
+}
+
+.footer a {
+    color: #FFFFFF;
+}
+
+.footer a:hover {
+    color: #c8c8c8;
+}
+
+.footer a:active {
+    color: #ff0000;
+}
+
+.footer a:visited {
+    color: #c8c8c8;
+}

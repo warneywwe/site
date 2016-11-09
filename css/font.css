@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Lenotte;
+    src:    url('../font/linotte.woff2') format('woff2'),
+            url('../font/linotte.woff') format('woff'),
+            url('../font/linotte.otf') format('otf'),
+            url('../font/linotte.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}

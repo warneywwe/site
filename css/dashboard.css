@@ -1,0 +1,1125 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Lenotte, sans-serif;
+}
+
+body {
+    font-family: Lenotte, sans-serif;
+    font-size: 15px;
+}
+
+#topo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+    border-bottom: 3px solid #000000;
+}
+
+.content {
+    width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.content * {
+    display: inline-block;
+}
+
+.titulo {
+    line-height: 50px;
+    float: left;
+}
+
+.titulo a {
+    text-decoration: none;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    font-family: sans-serif;
+}
+
+#menu {
+    text-align: center;
+    line-height: 50px;
+    cursor: default;
+}
+
+#menu a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 7px;
+    margin-left: -2px;
+    margin-right: -2px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    cursor: default;
+    font-family: "Berlin Sans FB", sans-serif;
+}
+
+#menu p a:hover {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.dropdown-hover:hover .menu-dropdown {
+    display: block;
+}
+
+.menu-dropdown {
+    position: absolute;
+    padding: 10px;
+    width: 157px;
+    height: auto;
+    display: none;
+    background-color: #ff4a3d;
+    color: #FFFFFF;
+    margin-top: -4px;
+    margin-left: -2px;
+    box-shadow: 0 25px 70px #dddddd;
+}
+
+.menu-dropdown a {
+    font-family: Lenotte, sans-serif !important;
+    font-size: 18px !important;
+    padding: 10px;
+    display: block;
+    border: none;
+}
+
+.menu-dropdown a:hover {
+    padding: 0;
+    border: none;
+    margin: auto;
+    color: #ff4a3d;
+    background-color: #FFFFFF;
+}
+
+#search {
+    margin: 0 10px;
+    width: 255px;
+}
+
+.search-class {
+    position: absolute;
+    top: 10px;
+    margin-left: -120px;
+}
+
+#search form input {
+    border: none;
+    border-radius: 10px;
+    width: 230px;
+    height: 30px;
+    transition: all .2s;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#search form input:focus {
+    outline: none;
+    box-shadow: 0 0 20px #dddddd;
+}
+
+#opts {
+    float: right;
+    cursor: pointer;
+    padding-top: 1px;
+}
+
+.perfil-user {
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    float: left;
+}
+
+.main-user {
+    width: 48px;
+    height: 48px;
+}
+
+.name-user {
+    line-height: 50px;
+    margin-left: 5px;
+}
+
+.seta:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.seta-bottom {
+    cursor: pointer;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border: 7px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.btn-seta {
+    background-color: transparent;
+    margin-top: -4px;
+    margin-right: 10px;
+    padding: 6px;
+    padding-left: 10px;
+    border: none transparent;
+    cursor: pointer;
+    text-align: center;
+    float: right;
+}
+
+.btn-seta:focus {
+    outline: none;
+}
+
+.perfil-user, .name-user, .dropdown-active {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1000;
+}
+
+.user-dropdown {
+    margin-top: -1px;
+}
+
+.user-dropdown * {
+    display: block;
+    text-align: left;
+    line-height: normal;
+}
+
+.user-dropdown a {
+    font-weight: bold;
+    padding: 10px 0 5px 20px;
+    text-decoration: none;
+}
+
+.user-dropdown {
+    padding: 15px 0;
+    width: 180px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 13px 20px rgba(165, 165, 165, 0.45);
+    cursor: default;
+}
+
+#convites, #hiper-fundo, #detalhes-favoritos {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#convites, #detalhes-favoritos {
+    z-index: 20001;
+    width: 900px;
+    background-color: #FFFFFF;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 40px #000000;
+    height: 450px;
+}
+
+#convites {
+    overflow: hidden;
+}
+
+#detalhes-favoritos {
+    overflow: hidden;
+}
+
+#convites-close, #detalhes-close {
+    width: 100%;
+    height: 40px;
+    background-color: #ff4a3d;
+}
+
+#convites-caixa, #favoritos-caixa {
+    padding: 10px 15px 0;
+    width: auto;
+    height: 89%;
+    overflow: auto;
+    text-align: center;
+}
+
+.user-convite {
+    width: 400px;
+    background-color: #dddddd;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 7px 10px;
+}
+
+.user-convite-perfil {
+    float: left;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+}
+
+.user-convite-content {
+    text-align: center;
+}
+
+.convite-name {
+    color: #ff4a3d;
+    font-weight: normal;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.convite-content-opt {
+    margin-top: 14px;
+    padding-bottom: 8px;
+}
+
+.btn-convite-aceitar, .btn-convite-recusar {
+    transition: all .3s;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.btn-convite-recusar:focus, .btn-convite-aceitar:focus {
+    outline: none;
+}
+
+.btn-convite-aceitar {
+    background-color: #ff4a3d;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.btn-convite-aceitar:hover {
+    background-color: #ca3f36;
+}
+
+.btn-convite-aceitar:active {
+    background-color: #9e322c;
+}
+
+.btn-convite-recusar {
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+}
+
+.btn-convite-recusar:hover {
+    background-color: #ababab;
+}
+
+.btn-convite-recusar:active {
+    background-color: #797979;
+}
+
+#hiper-fundo {
+    z-index: 20000;
+    background-color: rgba(129, 129, 129, 0.59);
+}
+
+#interface, #header {
+    margin: 10px auto;
+    width: 1100px;
+}
+
+#header {
+    margin: 60px auto 15px auto;
+    height: 350px;
+    box-shadow: 0 0 15px #000000;
+}
+
+.foto-slide {
+    height: 350px !important;
+    width: 1100px !important;
+}
+
+#esquerda {
+    width: 780px;
+    float: left;
+    margin-top: -15px;
+}
+
+#direita {
+    float: right;
+    width: 290px;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+article {
+    margin-bottom: 50px;
+}
+
+.caixa { /* DIV com os dados do autor do post */
+    position: relative;
+    z-index: 998;
+    width: 100%;
+    margin-top: 30px;
+    height: 80px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #6f6f6f;
+}
+.foto-perfil { /* Foto do autor */
+    border-radius: 80px;
+    width: 120px;
+    height: 120px;
+    margin-left: 50px;
+    margin-top: -23px;
+    float: left;
+    border: 3px solid #a1a1a1;
+    box-shadow: 0 0 20px #dddddd;
+}
+.titulo-post a { /* Título da postagem */
+    line-height: 70px;
+    margin: 0;
+    padding: 0;
+    margin-left: 25px;
+    font-size: 20pt;
+    text-decoration: none;
+}
+.titulo-post a:hover {
+    text-decoration: underline;
+}
+.detalhes-post { /* Data e hora da postagem */
+    margin-top: -10px;
+    width: 100%;
+    height: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.detalhes-post h1 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 9pt;
+    margin-left: 25px;
+    margin-top: 7px;
+    font-weight: normal;
+}
+
+.conteudo {
+    position: relative;
+    z-index: 0;
+    margin: -10px auto;
+    padding: 50px 15px 20px 15px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 15px #737373;
+}
+
+blockquote {
+    padding: 10px;
+    margin-left: 65px;
+    margin-bottom: 15px;
+}
+
+.publish {
+    margin: 10px auto;
+    width: 600px;
+    height: 340px;
+    padding: 10px;
+    line-height: 10px;
+    border: 2px solid #000000;
+}
+
+.publish img {
+    position: relative;
+    float: left;
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-opts {
+    position: relative;
+    margin-right: -192px;
+    margin-top: -11px;
+    float: right;
+    display: none;
+    transition: display .3s;
+    width: 180px;
+    border-left: none !important;
+}
+
+.dropdown-opts:hover {
+    margin-top: -11px;
+}
+
+.dropdown-opts a {
+    text-decoration: none;
+    display: block;
+    padding: 20px 5px 15px 20px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+
+.dropdown-nome, .dropdown-info {
+    position: absolute;
+    width: 590px;
+    height: 20px;
+    line-height: 20px;
+    padding: 6px 0 3px 15px;
+}
+
+.dropdown-info {
+    margin-top: 310px;
+}
+
+.help {
+    padding: 15px 5px 0 5px;
+    text-align: right;
+}
+
+.aside-content {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.aside-content h1, .aside-content h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.aside-content h1 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.aside-content h2 {
+    padding-top: 15px;
+}
+
+.aside-links a {
+    display: block;
+    padding: 6px 0 3px 20px;
+    margin: 2px 0;
+    text-decoration: none;
+}
+
+.lista-anime {
+    margin-top: -15px;
+}
+
+#rodape {
+    clear: both;
+    height: 400px;
+    width: 100%;
+}
+
+.esquerda {
+    float: left;
+    width: 590px;
+}
+
+.title {
+    margin-top: 90px;
+    margin-left: -250px;
+}
+
+.title h1 {
+    font-size: 70px;
+    line-height: 100px;
+}
+
+.footer-img {
+    position: absolute;
+    z-index: 9;
+    margin-left: -30px;
+    background: url("../img/content/footer.png") no-repeat;
+    width: 400px;
+    height: 400px;
+}
+
+.footer-links {
+    position: absolute;
+    display: block;
+    clear: both;
+    height: 120px;
+    margin-top: 200px;
+    margin-left: 120px;
+}
+
+.footer-links h2 {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    display: block;
+    text-decoration: none;
+}
+
+.type2 {
+    margin-left: 300px;
+}
+
+.content-rights {
+    display: block;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.content-rights a {
+    text-decoration: none;
+}
+
+.content-rights a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+.copyright {
+    position: absolute;
+    z-index: 10;
+    clear: both;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FFFFFF;
+    margin-top: 365px;
+    border-top: 3px solid #000000;
+}
+
+.copyright * {
+    text-align: left;
+}
+
+.copyright a:hover {
+    color: #000000;
+}
+
+.copyright a:active {
+    color: #555555;
+}
+
+.direita {
+    float: right;
+}
+
+.esquerda, .direita {
+    position: relative;
+    z-index: 10;
+}
+
+.centro-footer {
+    position: absolute;
+    z-index: 9;
+    clear: both;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100px;
+    margin-top: 90px;
+}
+
+.fb-page {
+    position: relative !important;
+    line-height: 250px;
+}
+
+/* Ultilitários especiais */
+.espaco {
+    width: 100%;
+    height: 20px;
+    clear: both;
+}
+
+
+/* Página de animes em lista */
+.anime-content {
+    width: auto;
+    height: 225px;
+}
+
+.img-content {
+    position: relative;
+    background-color: transparent;
+    z-index: 25;
+    float: left;
+    width: 400px;
+    height: 225px;
+    text-align: center;
+}
+
+.img-anime {
+    margin-top: 28px;
+    width: 300px;
+    margin-bottom: -6px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+
+.anime-content:hover .img-anime {
+    transform: scale(1.333);
+    -webkit-transform: scale(1.333);
+    -ms-transform: scale(1.333);
+    -o-transform: scale(1.333);
+    -moz-transform: scale(1.333);
+}
+
+.anime-info {
+    float: right;
+    width: 370px;
+    height: auto;
+    padding-top: 10px;
+}
+
+.detalhes-anime {
+    text-align: center;
+}
+
+.detalhes-anime h1 {
+    font-size: 23px;
+}
+
+.detalhes-anime h1 a {
+    text-decoration: none;
+}
+
+.detalhes-anime h1 a:hover {
+    text-decoration: underline;
+}
+
+.anime-faixa {
+    margin-top: 10px;
+    position: relative;
+    padding-left: 400px;
+    padding-top: 25px;
+    clear: both;
+    z-index: 24;
+    width: auto;
+    height: 100px;
+    margin-left: -401px;
+}
+
+.anime-faixa h2 {
+    text-align: right;
+    margin-top: -23px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.anime-faixa p {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.anime-opts {
+    width: 689px;
+}
+
+.left {
+    text-align: left;
+}
+
+.left a {
+    margin-left: -1px;
+    margin-right: -5px;
+    padding: 22px 14.2px 20px;
+    line-height: 60px;
+    text-decoration: none;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.left a:hover {
+    text-decoration: underline;
+}
+
+.right {
+    margin-top: -31px;
+    text-align: right;
+}
+
+.panel {
+    width: auto;
+}
+
+.lista-left {
+    width: auto;
+    padding: 10px;
+    height: 175px;
+}
+
+.form-anime h1 {
+    text-align: center;
+}
+
+.form-anime form {
+    display: block;
+    padding-left: 10px;
+}
+
+.form-left {
+    float: left;
+}
+
+.form-right {
+    float: right;
+    margin-right: 10px;
+}
+
+.form-center {
+    height: 95px;
+}
+
+.submit-content {
+    text-align: center;
+}
+
+.lcategoria, .categoria-select {
+    display: block;
+}
+
+.lcategoria {
+    padding-left: 15px;
+}
+
+.categoria-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 320px;
+    height: 40px;
+    font-family: Lenotte, sans-serif;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-left: 10px;
+    transition: all .2s;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.categoria-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #dddddd;
+}
+
+.categoria-select option {
+    color: #ff4a3d;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+}
+
+.categoria-select option:checked {
+    background-color: #ff4a3d;
+    color: #000000;
+}
+
+.btn {
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+    font-family: Lenotte, sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: auto;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e8e8e8;
+}
+
+.btn:active {
+    background-color: #cacaca;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 15px #dddddd;
+}
+
+.search {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.search-query {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 260px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all .3s;
+    font-family: Lenotte, sans-serif;
+    color: #ff4a3d;
+}
+
+.search-query:focus {
+    outline: none;
+    box-shadow: 0 0 15px #dddddd;
+}
+
+
+/* Área de estilo da página de amigos */
+#amigos-opt a {
+    background-color: #ff4a3d;
+    padding: 10px;
+    text-decoration: none;
+    margin-right: -5px;
+    transition: all .3s;
+}
+
+#amigos-opt a:hover {
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+}
+
+.amigos-active {
+    border-top: 3px solid #ff4a3d;
+    background-color: #FFFFFF !important;
+    color: #ff4a3d !important;
+    cursor: default;
+}
+
+#amigos {
+    background-color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+#amigos-eu {
+    width: 345px;
+    height: 200px;
+    background-color: #ff4a3d;
+    color: #FFFFFF;
+    padding: 5px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.amigo-perfil {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.amigo-nome {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.amigo-nome h1 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.amigo-info {
+    margin: 30px auto 0 3px;
+}
+
+.amigo-info-content {
+    display: inline-block;
+    margin: 1px;
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+    padding: 4px;
+}
+
+.amigo-info-content h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.amigo-info-content span {
+    font-size: 12px;
+}
+
+.btn-close {
+    font-size: 25px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 4px;
+    padding: 5px 7px 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 5px;
+}
+
+.btn-close:hover {
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+}
+
+
+/* Página de erro 404 */
+#interface-404 {
+    background: url("../img/content/404-seta-balao.png") no-repeat;
+    background-size: 100px auto;
+    background-position: 49.3% 29%;
+    width: 900px;
+    min-height: 300px;
+    margin: auto;
+}
+
+.erro-404 {
+    position: absolute;
+    float: left;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.59);
+    color: #ff4a3d;
+    font-size: 20px;
+    width: 400px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 150px;
+}
+
+.erro-404-type1 {
+    float: right;
+    background: url("../img/content/notfound-type1.png") no-repeat;
+    background-size: auto 600px;
+    width: 520px;
+    height: 600px;
+}
+
+#nav-404 {
+    position: absolute;
+    float: right;
+    top: 10px;
+    right: 0;
+}
+
+#nav-404 a {
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 90px 10px 20px;
+    background-color: #ff4a3d;
+    transition: all .2s;
+}
+
+#nav-404 a:hover {
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+}
+
+.drop-404 {
+    margin-top: 10px;
+    width: 177px;
+    display: none;
+}
+
+.drop-404 a {
+    font-size: 15px;
+    display: inline-block;
+    width: 90px;
+    padding: 10px 87px 10px 20px !important;
+}
+
+
+/* página favoritos */
+#favoritos {
+    width: auto;
+    margin: auto;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+#favoritos p {
+    font-size: 20px;
+    color: #ff4a3d;
+    padding: 10px;
+}
+
+.anime-favorito {
+    margin-bottom: 10px;
+    width: auto;
+    height: 70px;
+    padding: 5px;
+    background-color: #ff4a3d;
+    border-radius: 3px;
+}
+
+.anime-favorito-thumb, .anime-favorito-thumb img {
+    width: 50px;
+    height: 70px;
+}
+
+.anime-favorito-thumb {
+    overflow: hidden;
+    border-radius: 4px;
+    float: left;
+}
+
+.anime-favorito-nome {
+    height: 70px;
+    padding-left: 10px;
+    line-height: 70px;
+    float: left;
+}
+
+.anime-favorito-nome h1 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.anime-favorito-nome a {
+    float: left;
+    margin-top: -10px;
+    display: inline;
+    line-height: 10px;
+}
+
+.favorito-anime-opt {
+    float: right;
+}
+
+.favorito-anime-ir, .btn-anime-more {
+    border: none;
+    background-color: #FFFFFF;
+    color: #ff4a3d;
+    border-radius: 3px;
+    display: block;
+    transition: all .3s;
+}
+
+.btn-anime-more:hover, .favorito-anime-ir:hover {
+    background-color: #dcdcdc;
+}
+
+.btn-anime-more:active, .favorito-anime-ir:active {
+    background-color: #a1a1a1;
+}
+
+.btn-anime-more:focus, .favorito-anime-ir:focus {
+    outline: none;
+}
+
+.aside-type2 {
+    margin-top: -15px !important;
+    padding-bottom: 0 !important;
+}
+
+.aside-type3 {
+    overflow: auto;
+    max-height: 500px;
+}

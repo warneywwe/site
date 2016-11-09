@@ -1,0 +1,1 @@
+document.write('<div id="block">Eu sou um anúncio!</div>');
